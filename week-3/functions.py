@@ -15,6 +15,7 @@
 # Funcion sin parametros
 def imprimir_hola_mundo():
     print("Hola mundo!")
+    print("Otro")
 
 
 # Ejecute la funcion que se llama imprimir_hola_mundo
