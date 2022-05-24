@@ -22,6 +22,8 @@ separar()
 # mayor que: >
 # igual: ==
 # diferente: !=
+# menor o igual: <=
+# mayor o igual: >=
 
 # Las funciones que devuelven un valor de verdad, deberían tener un
 # nombre en forma de pregunta
@@ -45,3 +47,10 @@ separar()
 print(son_a_y_b_iguales(10, 10))  # True
 print(son_a_y_b_iguales(10, 11))  # False
 print(son_a_y_b_iguales(1044, 1144))  # False
+
+mi_str_1 = "Soy el string 1"
+mi_str_2 = "Soy el string 2"
+
+separar()
+
+print(mi_str_1 == mi_str_2)
