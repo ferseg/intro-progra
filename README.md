@@ -14,3 +14,13 @@ El propósito del curso es introducir conceptos de programación empezando desde
 - Tipos de datos y conversiones de datos: `str`, `float`, `int`
 - Variables
 - Interacción con la consola mediante el uso de `input`
+
+### Semana 3
+- Funciones `def nombre(params):`
+- Palabra reservada `return`
+- Valores booleanos
+
+### Semana 4
+- mas sobre funciones
+- `if-else-elif`
+- Operaciones con string
