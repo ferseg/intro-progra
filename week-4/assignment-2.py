@@ -19,6 +19,16 @@ y así facilitar la comparación del alimento
 '''
 
 
+def clasificador_alimentos(alimento):
+    alimento_lwr = alimento.lower()
+    if alimento_lwr == "banano" or alimento_lwr == "manzana" or alimento_lwr == "tomate":
+        return "Fruta"
+    elif alimento_lwr == "brocoli" or alimento_lwr == "coliflor" or alimento_lwr == "zanahoria":
+        return "Verdura"
+    else:
+        return "No tenemos registro"
+
+
 '''
 2. Escriba un programa que me indique mi clasificación (bajo peso, normal, sobre peso, obeso) 
 según mi IMC (Indice de masa corporal)
@@ -69,6 +79,15 @@ Test cases:
     - reemplazas_os("Mi str") # => "No hubo reemplazos" "Mi str"
     - reemplazas_os("Yo sOy un str") # => "Se reemplazaron las Os por 0s" "Y0 s0y un str"
 '''
+
+
+def reemplazas_os(str):
+    str_rpl = str.replace("o", "0").replace("O", "0")
+    if str == str_rpl:
+        print("No hubo reemplazos")
+    else:
+        print("Se reemplazaron las Os por 0s")
+    print(str_rpl)
 
 
 '''
