@@ -37,6 +37,23 @@ Test cases:
 '''
 
 
+def clasificador_imc(imc):
+    if imc < 18.5:
+        return "Bajo peso"
+    elif imc < 25:
+        return "Normal"
+    elif imc < 30:
+        return "Sobre peso"
+    else:
+        return "Obeso"
+
+
+print(clasificador_imc(18))  # => "Bajo peso"
+print(clasificador_imc(23))  # => "Normal"
+print(clasificador_imc(29.9))  # => "Sobre peso"
+print(clasificador_imc(33.3))  # => "Obeso"
+print(clasificador_imc(25))  # => "Normal"
+
 '''
 3. Escriba un programa que reemplace las O por 0
 si hubo algún reemplazo que imprima "Se reemplazaron las Os por 0s" y adicionalmente
@@ -70,6 +87,17 @@ Tips (supuestos):
 '''
 
 
+def predecir_cambio_aceite(km_por_semana):
+    cant_semanas_para_cambio_aceite = 5000 / km_por_semana
+    return cant_semanas_para_cambio_aceite / 4
+
+
+# => 10, Si uso el carro 125km por semana, en 10 meses deberia ser el siguiente cambio
+print(predecir_cambio_aceite(125))
+# => 2.5, Si uso el carro 500km por semana, en 2.5 meses deberia ser el siguiente cambio
+print(predecir_cambio_aceite(500))
+
+
 '''
 5. Escriba un programa que indique si el cambio de aceite de un carro se debe realizar por tiempo
 o por cantidad de km.
@@ -82,3 +110,15 @@ Tip:
     - Para saber el siguiente cambio de aceite puede utilizar el programa desarrollado
     en el punto 4
 '''
+
+
+def indicar_razon_de_cambio_de_aceite(km_por_semana):
+    siguiente_cambio = predecir_cambio_aceite(km_por_semana)
+    if siguiente_cambio > 6:
+        return "Cambio de aceite por tiempo"
+    else:
+        return "Cambio de aceite por cantidad de km"
+
+
+print(indicar_razon_de_cambio_de_aceite(125))
+print(indicar_razon_de_cambio_de_aceite(500))
