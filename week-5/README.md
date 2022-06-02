@@ -47,6 +47,43 @@ if not(str_1.startswith("8") or str_1.startswith("9")):
     return "No es Kolbi"
 ```
 
+
+## Variables globales
+Las variables globales se definen en la raíz del archivo (al mismo nivel que se declaran las funciones), este tipo 
+de variables puede ser utilizada dentro de cualquier función y su valor es compartido (entre todas las funciones que lo usen).
+
+Para hacer uso de una variable global dentro de una función hay que usar la palabra reservada `global`
+
+#### Ejemplo
+```python
+mi_var_global = 1
+
+def incrementar_variable_global():
+    global mi_var_global
+    mi_var_global += 1
+
+def imprimir_variable_global():
+    global mi_var_global
+    print(mi_var_global)
+
+incrementar_variable_global()
+incrementar_variable_global()
+incrementar_variable_global()
+
+# Esto va a imprimir 4, porque inicialmente la variable era 1
+# como se llamó a incrementar 3 veces cada una de esas veces
+# incrementó la variable en 1, a la hora de imprimir la variable es 4
+imprimir_variable_global() 
+```
+
+## Listas
+### Strings como listas
+El string es una cadena de caracteres, cada caracter en el string se le asigna una posición de izquierda a derecha
+empezando desde 0, esta posición es conocida como índice.
+
+#### Funciones sobre strings
+
+
 ## Referencias
  - [Python Strings](https://www.w3schools.com/python/python_strings.asp)
  - [Operadores logicos](https://www.w3schools.com/python/python_operators.asp)
