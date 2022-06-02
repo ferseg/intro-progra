@@ -81,8 +81,26 @@ imprimir_variable_global()
 El string es una cadena de caracteres, cada caracter en el string se le asigna una posición de izquierda a derecha
 empezando desde 0, esta posición es conocida como índice.
 
-#### Funciones sobre strings
+#### Operaciones sobre strings
+Existen varias operaciones que se pueden realizar tanto en listas como en string, a continuación se ejemplifican algunas
 
+- Obtener un segmento del string iniciando en el índice 0 y terminando en el índice x, el caracter en el índice x no va a ser incluido
+
+```python
+mi_str = "Hola mundo"
+indice_x = 3
+# Esto va a imprimir "Hol"
+print(mi_str[:indice_x])
+```
+
+- Obtener un segmento del string iniciando en el índice x y terminando en el último caracter, el caracter en el índice x sí va a ser incluido
+
+```python
+mi_str = "Hola mundo"
+indice_x = 3
+# Esto va a imprimir "a mundo"
+print(mi_str[indice_x:])
+```
 
 ## Referencias
  - [Python Strings](https://www.w3schools.com/python/python_strings.asp)
